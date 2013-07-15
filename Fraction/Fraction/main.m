@@ -10,6 +10,14 @@
 
 #import "Fraction.h"
 
+void showVariable(){
+    
+    NSLog(@"integer -> %i", 1024);
+    NSLog(@"float -> %f and %g", 1024.00, 2048.1024);
+    NSLog(@"double -> %e and %g", 1234.56789, 9876.54321);
+    NSLog(@"char -> %c", 'j');
+}
+
 int main(int argc, const char * argv[])
 {
 
@@ -28,8 +36,17 @@ int main(int argc, const char * argv[])
         NSLog(@"The value of frac is : ");
         [frac print];
         
+        
+        Fraction * frac1 = [[Fraction alloc] init];
+        [frac1 print];
+        
+        Fraction * frac2 = [Fraction new];
+        [frac2 setNumberator:5];
+        [frac2 setDenominator:8];
+        [frac2 print];
+        
+        showVariable();
     }
     
     return 0;
 }
-
